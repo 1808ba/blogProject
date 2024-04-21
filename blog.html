@@ -8,9 +8,25 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="blog.css" />
-   
-   
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+      rel="stylesheet"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="styles/blog.css" />
+
     <title>blog</title>
 </head>
 <body>
@@ -22,13 +38,56 @@
           </label>
           <input type="checkbox" name="check" id="check" />
           <ul>
-            <li><a href="#">Home</a></li>
+            <!-- <li><a href="insertPost.html">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Resume</a></li> -->
+            <button id="delBtn" class="btnStyle">delete all posts</button>
+            <!-- <button onclick="document.querySelector('.containerPage').style.display='flex';" class="btnStyle">show posts</button> -->
+            
+            <button id="addPost" class="btnStyle" >add post</button>
+  
           </ul>
         </div>
-      </nav>
+      </nav> 
+      <!-- search -->
+      <div class="search-section">
+
+      </div>
+      
+<br>
+<br>
+<br>
+      <form id="postForm" style="display: none; background-color: #f2f2f2; padding: 20px; border-radius: 5px;text-align: center;">
+        <h1 style="margin-bottom: 20px;">Add New Post</h1>
+
+        <label for="imageURL">Image URL:</label><br>
+        <input type="text" id="imageURL" name="imageURL" required><br>
+
+        <label for="postTitle">Title:</label><br>
+        <input type="text" id="postTitle" name="postTitle" required><br>
+
+        <label for="postDescription">Description:</label><br>
+        <textarea id="postDescription" name="postDescription" rows="4" cols="50" required></textarea><br>
+
+        <button type="submit" class="btnStyle">Save</button>
+        <button onclick="document.getElementById('postForm').style.display='none';" class="btnStyle">Close</button>
+      </form>
+
+
+          <div id="edit-form-container"></div>
+
+
+          <div class="containerPage" >
+            <div class="cards-section">
+              <!-- Posts will be inserted here -->
+            </div>
+          </div>  
+    
+
+
+
+    <script type="module" src="scripts/blog.js"></script>
+    <!-- <script type="module" src="scripts/post.js"></script> -->
+    
 </body>
 </html>
